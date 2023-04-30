@@ -12,7 +12,7 @@ version = "1.0.0-SNAPSHOT"
 kotlin {
   // region KMP Targets
   android { publishLibraryVariants("release") }
-  jvm()
+//  jvm()
   ios()
   iosSimulatorArm64()
   // TODO regular frameworks are not yet supported
@@ -42,6 +42,7 @@ kotlin {
         api(projects.circuitFoundation)
         api(libs.coroutines)
         implementation(libs.molecule.runtime)
+        implementation(libs.kmmviewmodel.core)
       }
     }
     maybeCreate("commonTest").apply { dependencies { implementation(libs.kotlin.test) } }
